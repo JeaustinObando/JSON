@@ -19,6 +19,7 @@ values (2,'{"idFurniture":2,"name":"Table","space":4,"material":"wood","pieces":
 insert into furniture(idFurniture,jsonType)
 values (3,'{"idFurniture":3,"name":"Chair","space":1,"material":"wood","pieces":1,"typeFurniture":3,"price":200000}')
 
+
 --inserts clients
 insert into client(idClient,jsonClient)
 values (1,'{"name":"Joshua", "firstLastName":"Morris","secondLastName":"Smith",
