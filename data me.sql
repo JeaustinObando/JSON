@@ -44,7 +44,7 @@ WHILE @count > 0
 BEGIN
 	DECLARE @Json VARCHAR(MAX) = (select top(1) JsonData from @TempJson)
 	insert into dbo.furniture
-		select idFurniture,name,space,material,pieces,typeFurniture,price
+		select idFurniture,name,space,material,pieces,typeFurniture,price,inventory
 		from openJson(@Json)
 		with (	idFurniture int,
 				name varchar(20),
@@ -52,7 +52,8 @@ BEGIN
 				material varchar(30),
 				pieces int,
 				typeFurniture int,
-				price money)
+				price money,
+				inventory money)
 	
     DELETE TOP (1) FROM @TempJson
     SELECT @count = COUNT(*) FROM @TempJson;
@@ -86,7 +87,7 @@ BEGIN
     DELETE TOP (1) FROM @TempJson
     SELECT @count = COUNT(*) FROM @TempJson;
 END
-delete from type_employee
+
 select * from dbo.type_employee
 
 --Employee

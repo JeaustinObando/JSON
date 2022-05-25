@@ -11,15 +11,15 @@ values (3,'{"idTypeFurniture":3,"name":"Chair","details":"Table item"}')
 
 --inserts furniture
 insert into furniture(idFurniture,jsonType)
-values (1,'{"idFurniture":1,"name":"Armchair","space":3,"material":"leather","pieces":3,"typeFurniture":1,"price":150000}')
+values (1,'{"idFurniture":1,"name":"Armchair","space":3,"material":"leather","pieces":3,"typeFurniture":1,"price":150000,"inventory":1500}')
 
 insert into furniture(idFurniture,jsonType)
-values (2,'{"idFurniture":2,"name":"Table","space":4,"material":"wood","pieces":4,"typeFurniture":2,"price":350000}')
+values (2,'{"idFurniture":2,"name":"Table","space":4,"material":"wood","pieces":4,"typeFurniture":2,"price":350000,"inventory":150}')
 
 insert into furniture(idFurniture,jsonType)
-values (3,'{"idFurniture":3,"name":"Chair","space":1,"material":"wood","pieces":1,"typeFurniture":3,"price":200000}')
+values (3,'{"idFurniture":3,"name":"Chair","space":1,"material":"wood","pieces":1,"typeFurniture":3,"price":200000,"inventory":450}')
 
-
+delete from furniture
 --inserts clients
 insert into client(idClient,jsonClient)
 values (1,'{"idClient":1,"name":"Joshua", "firstLastName":"Morris","secondLastName":"Smith",
