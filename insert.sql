@@ -22,26 +22,28 @@ values (3,'{"idFurniture":3,"name":"Chair","space":1,"material":"wood","pieces":
 
 --inserts clients
 insert into client(idClient,jsonClient)
-values (1,'{"name":"Joshua", "firstLastName":"Morris","secondLastName":"Smith",
+values (1,'{"idClient":1,"name":"Joshua", "firstLastName":"Morris","secondLastName":"Smith",
 "address":"1850 West 400 South Pingree, ID 83262 USA","idPayMethod":1}')
 
 insert into client(idClient,jsonClient)
-values (2,'{"name":"Amanda", "firstLastName":"Wiggins","secondLastName":"Ortiz",
+values (2,'{"idClient":2,"name":"Amanda", "firstLastName":"Wiggins","secondLastName":"Ortiz",
 "address":"795 County Road 732 Jonesboro, AR 72401 USA","idPayMethod":2}')
 
 insert into client(idClient,jsonClient)
-values (3,'{"name":"Annette", "firstLastName":"Chase","secondLastName":"Aguirre",
+values (3,'{"idClient":3,"name":"Annette", "firstLastName":"Chase","secondLastName":"Aguirre",
 "address":"11291 Maybrook Avenue Whittier, CA 90603 USA","idPayMethod":3}')
 
 insert into client(idClient,jsonClient)
-values (4,'{"name":"Edward ", "firstLastName":"Martin","secondLastName":"Myers",
+values (4,'{"idClient":4,"name":"Edward ", "firstLastName":"Martin","secondLastName":"Myers",
 "address":"8261 Prospect Way Juneau, AK 99801 USA","idPayMethod":4}')
 
-
+delete from client
+select * from client
 ---inserts Type
+use JsonBIT
 insert into type_employee (idTypeEmployee,jsonTypeEmployee)
 values
-(1,'{"idTypeEmployee":1,"name":"Customer Support"}')
+(1,'{"idTypeEmployee":1,"name":"Customer"}')
 
 insert into type_employee (idTypeEmployee,jsonTypeEmployee)
 values
@@ -50,20 +52,32 @@ values
 insert into type_employee (idTypeEmployee,jsonTypeEmployee)
 values
 (3,'{"idTypeEmployee":3,"name":"Manufacturing"}')
-
+delete from type_employee
+select * from type_employee
 --inserts employees
 insert into employee(idEmployee,jsonEmployee)
 values(1,'{"idEmployee":1,"name":"Stella","firstLastName":"Grey","SecondLastName":"Jhonson","identificationCard":"01-0548-0704","idTypeEmployee":1,"address":"Seattle, Washingthon DC","birthday":"12-01-1980"}')
-insert into employee(idEmployee,jsonEmployee)
-
-values (2,'{"idEmployee":2,"name":"Alberto","firstLastName":"Perez","SecondLastName":"Quiros","identificationCard":"4397
-","idTypeEmployee":2,"address":"100m Norte de Cementerio Alajuela","birthday":01/01/1998}')
 
 insert into employee(idEmployee,jsonEmployee)
-values (3,'{"idEmployee":3,"name":"Juan","firstLastName":"Rodrigues","SecondLastName":"Alvarez","identificationCard":"2525
-","idTypeEmployee":3,"address":"150m sur, 75m oeste, Bomberos Grecia","birthday":10/20/2001}')
+values(2,'{"idEmployee":2,"name":"Stela","firstLastName":"Grey","SecondLastName":"Jhonson","identificationCard":"01-0548-0704","idTypeEmployee":1,"address":"Seattle, Washingthon DC","birthday":"12-01-1980"}')
 
 
+
+insert into employee(idEmployee,jsonEmployee)
+values(3,'{"idEmployee":3,"name":"Stellita","firstLastName":"Grey","SecondLastName":"Jhonson","identificationCard":"01-0548-0704","idTypeEmployee":1,"address":"Seattle, Washingthon DC","birthday":"12-01-1980"}')
+
+
+
+insert into employee(idEmployee,jsonEmployee)
+
+values (2,'{"idEmployee":2,"name":"Alberto","firstLastName":"Perez","SecondLastName":"Quiros","identificationCard":"4397"
+,"idTypeEmployee":2,"address":"100m Norte de Cementerio Alajuela","birthday":"01/01/1998"}')
+
+insert into employee(idEmployee,jsonEmployee)
+values (3,'{"idEmployee":3,"name":"Juan","firstLastName":"Rodrigues","SecondLastName":"Alvarez","identificationCard":"2525"
+,"idTypeEmployee":3,"address":"150m sur, 75m oeste, Bomberos Grecia","birthday":"10/20/2001"}')
+
+delete from employee
 --inserts paymethods
 
 use JsonDB
