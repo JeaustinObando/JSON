@@ -23,4 +23,4 @@ if exists (select idClient from JsonBIT.dbo.client where idClient = @idClient)
 			end
 
 
-exec generateOrderPersonalized 1, 1, 1000, 1, '{"idBuy":"1","name":"color", "details":"purple"}'
+exec generateOrderPersonalized 1, 1, 1, '{"idBuy":"1","name":"color", "details":"purple"}'
